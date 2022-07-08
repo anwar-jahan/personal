@@ -10,5 +10,15 @@ pipeline {
                 '''
             }
         }
+        
+        stage('Junit Test') {
+                    steps {
+                        sh 'echo "Start Testing"'
+                        sh '''
+                            echo "end Testing"
+                            ls -lah
+                        '''
+                    }
+        }
     }
 }
