@@ -10,15 +10,23 @@ pipeline {
                 '''
             }
         }
-        
-        stage('Junit Test') {
-                    steps {
-                        sh 'echo "Start Testing"'
-                        sh '''
-                            echo "end Testing"
-                            ls -lah
-                        '''
-                    }
+        stage('Test') {
+            steps {
+                sh 'echo "Start Testing"'
+                sh '''
+                    echo "end Testing"
+                    ls -lah
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+               sh 'echo "Start Deploy"'
+               sh '''
+               echo "end Deploy"
+               ls -lah
+               '''
+            }
         }
     }
 }
