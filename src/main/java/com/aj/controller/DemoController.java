@@ -13,4 +13,5 @@ public class DemoController {
     System.out.println("##### Web Hook #####" + request);
     return new ResponseEntity<>(request, HttpStatus.OK);
   }
+  // ##ENTRYPOINT ["java","-jar","/personal.jar"]
 }
